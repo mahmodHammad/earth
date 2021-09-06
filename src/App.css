@@ -37,3 +37,14 @@ canvas {
 .MuiSelect-select.MuiSelect-select {
   padding-right: 38px !important;
 }
+
+.footer{
+  position:fixed;
+  z-index: 100000;
+  color: aquamarine;
+  bottom: 0px;
+  left: 0px;
+  width:100%;
+  justify-content: center;
+  text-align: center;
+}

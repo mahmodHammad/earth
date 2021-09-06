@@ -8,6 +8,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 // My components --------------------------------
 
 import Routeer from "./Routing"
+import Footer from "./Footer"
 
 // import Footer from "./../shared/Footer/Footer";
 // import Home from "../pages/Home/Home";
@@ -47,6 +48,7 @@ export default class App extends Component {
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
           <Routeer theme={theme} />
+          <Footer/>
         </MuiThemeProvider>
     );
   }
