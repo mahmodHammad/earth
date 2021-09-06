@@ -3,6 +3,7 @@ import { sceneSetup, scene ,controls} from "./setup";
 import { startAnimationLoop ,requestID} from "./Animate";
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from "../Navbar/Navbar"
+import Footer from "../Footer"
 
 const useStyles = makeStyles((theme) => ({
   btnContainer:{
@@ -37,17 +38,12 @@ export default function Cat( ) {
 
   return (
     <div className={classes.body}>
-       <Navbar
-       isHomePage={true}
-          isDarkMode={true}
-          // draweOpen={draweOpen}
-          // toggleDrawer={toggleDrawer}
-          draweOpen={()=>console.log("")}
-          toggleDrawer={()=>console.log("")}
-        />
+  
 
          
       <div ref={textInput} className="canvas"></div>
+      <Footer/>
+
 
   
     </div>

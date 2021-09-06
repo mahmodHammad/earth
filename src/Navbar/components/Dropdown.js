@@ -73,13 +73,10 @@ if(e.target.tagName==="CANVAS"){
               fullWidth
               component={Link}
               to={{
-                pathname: "/shop",
-                state: {
-                  scrollTo: "projects"
-                }
+                pathname: "/projects",
               }}
             >
-              Shop
+              Projects
             </Button>
             <Divider />
           </Paper>

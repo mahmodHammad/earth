@@ -46,9 +46,9 @@ export default class App extends Component {
     const { theme } = this;
     return (
         <MuiThemeProvider theme={theme}>
+     
           <CssBaseline />
           <Routeer theme={theme} />
-          <Footer/>
         </MuiThemeProvider>
     );
   }

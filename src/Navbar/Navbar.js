@@ -65,13 +65,10 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
                 color="primary"
                 component={Link}
                 to={{
-                  pathname: "/shop",
-                  state: {
-                    scrollTo: "shop"
-                  }
+                  pathname: "/projects",
                 }}
               >
-              Shop
+              Projects
               </Button>:  <div className={classes.badgeContainer} onClick={()=>toggleDrawer(true)}>
               <Badge className={classes.badge} badgeContent={itemsNumberOnCart} color="primary">
                  <ShoppingCartIcon onClick={()=>toggleDrawer(true)} color="primary" fontSize="small" />
@@ -80,8 +77,8 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
             </Hidden>
 
             <Hidden mdUp={true}>
-            {isHomePage?
               <Dropdwon toggleDrawer={toggleDrawer}  />
+            {/* {isHomePage?
               : 
              <div className={classes.badgeContainer} onClick={()=>toggleDrawer(true)}>
               <Badge className={classes.badge} badgeContent={itemsNumberOnCart} color="primary">
@@ -89,14 +86,8 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
               </Badge>
              </div> 
 
-            }
+            } */}
             </Hidden>
-
-           
-        
-
-
-
           </Toolbar>
         </AppBar>
     </div>

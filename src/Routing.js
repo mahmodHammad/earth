@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar/Navbar";
 import Cat from "./three/Cat"
 import Shop from "./pages/shop/Shop"
+import Projects from "./pages/projects/Projects"
+import Project from "./pages/project/Project"
+
 import Checkout from "./pages/checkout/Checkout"
 import { makeStyles } from "@material-ui/core/styles";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -10,12 +13,12 @@ import Button from '@material-ui/core/Button';
 import "./App.css";
 import Sucess from "./pages/feedback/Sucess"
 import Dash from "./pages/Dash/Dash"
-
 import p1 from "./assets/p1.jpeg"
 import p2 from "./assets/p2.jpeg"
 import l1 from "./assets/l1.jpeg"
 import l2 from "./assets/l2.jpeg"
 import Avatar from "./assets/avatar.jpeg"
+
 
 const products = [
   {
@@ -132,19 +135,6 @@ const setsize=(itemID,newsize)=>{
     }else{
       
     }
-   
-    // const indd = cartData.findIndex(cd=>id===cd.id)
-    // if(indd !==-1){
-    //   // EXISTED
-    //  cartData[indd].quan +=1
-    //   SetcartData(cartData)
-
-    // }else{
-    //   item.quan=1
-    //   SetcartData([...cartData,item])
-    // }
-  
-    
   }
 
   const increaseQuantitly = (itemID,sign=1)=>{
@@ -158,20 +148,24 @@ const setsize=(itemID,newsize)=>{
     }
   }
 
-  useEffect(() => {
-  
-    // const info = AllProjects.find(e => e.id === projId);
-  });
-
   return (
         <div style={{ background: theme.palette.background.default ,minHeight:"100vh"}}>
+       
             <BrowserRouter>
+            <Navbar
+          isHomePage={true}
+          isDarkMode={true}
+          draweOpen={()=>console.log("")}
+          toggleDrawer={()=>console.log("")}
+        />
             <Drawer removeItem={removeItem} setsize={setsize} increaseQuantitly={increaseQuantitly} toggleDrawer={toggleDrawer} draweOpen={draweOpen}cartData={cartData} />
               <Switch>
                 <Route exact path="/" render={props => <Cat/>} />
                 <Route exact path="/dash" render={props => <Dash/>} />
                 <Route exact path="/success" render={props => <Sucess/>} />
                 <Route exact path="/shop" render={props => <Shop cartData={cartData} addToCart={addToCart} toggleDrawer={toggleDrawer} products={products}/>}/>
+                <Route exact path="/projects" render={props => <Projects/> }/>
+                <Route exact path="/project" render={props => <Project/> }/>
                 <Route exact path="/checkout" render={props => <Checkout cartData={cartData}/>} />
               </Switch>
               {/* <Footer /> */}
