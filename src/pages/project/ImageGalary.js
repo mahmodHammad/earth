@@ -11,13 +11,14 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
-    borderRadius:10
+    // backgroundColor: theme.palette.background.paper,
+    borderRadius:10,
+    marginTop:90
 
   },
   imageList: {
     borderRadius:10,
-    // width: 500,
+    width: 500,
     // height:200
   },
 }));
@@ -44,7 +45,7 @@ export default function BasicImageList() {
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={300}  className={classes.imageList} cols={2}>
+      <GridList cellHeight={400}  className={classes.imageList} cols={2}>
         {allImages.map((item,index) => (
           <GridListTile key={index*100} cols={item[1] || 1}>
             <img src={item[0].default} alt={index} />
