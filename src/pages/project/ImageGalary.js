@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageList: {
     borderRadius:10,
-    width: 500,
+    maxWidth: 700,
     // height:200
   },
 }));
@@ -30,13 +30,13 @@ const allImages = [
     [require("../../Images/Photo 3.png")],
     [require("../../Images/Photo 4.png")],
     [require("../../Images/Photo 5.png")],
-    // [require("../../Images/Photo 6.png")],
+    [require("../../Images/Photo 6.png")],
     [require("../../Images/Photo 7.png")],
     [require("../../Images/Photo 8.png")],
     [require("../../Images/Photo 9.png")],
     [require("../../Images/Photo 10.png")],
     [require("../../Images/Photo 11.png")],
-    [require("../../Images/Photo 12.png")],
+    // [require("../../Images/Photo 12.png")],
     [require("../../Images/Photo 13.png"),2],
 ]
 
@@ -45,7 +45,7 @@ export default function BasicImageList() {
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={400}  className={classes.imageList} cols={2}>
+      <GridList spacing={12} cellHeight={500}  className={classes.imageList} cols={2}>
         {allImages.map((item,index) => (
           <GridListTile key={index*100} cols={item[1] || 1}>
             <img src={item[0].default} alt={index} />

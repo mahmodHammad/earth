@@ -40,11 +40,12 @@ const useStyles = makeStyles(theme => ({
  content:{
     marginBottom:30,
     marginTop:30,
-    fontSize:30,
+    // fontSize:30,
+    fontSize: "1.3rem"
  },
  link:{
      textDecoration:"underline",
-     fontSize:33,
+     fontSize: "1.3rem",
      fontWeight:"bold",
      display:"block",
      textAlign:"center",
@@ -99,32 +100,29 @@ export default function Projec({ }) {
                 and even specific customization of organic
                 structures will be within reach.
             </Typography >
-            <Link href="https://www.youtube.com/watch?v=LajvidhBK2Y&list=LL&index=4" target="_blank" className={classes.link}>Visualization of ECM </Link>
+            <Link href="https://www.youtube.com/watch?v=LajvidhBK2Y&list=LL&index=4" target="_blank" className={classes.link}>Visualization of the ECM </Link>
             <Link href="https://www.youtube.com/watch?v=cMNx17H3dRU&list=LL&index=3" target="_blank" className={classes.link}>How cells interact with the ECM</Link>
             <ImageGalary/>
 
 <div className = {classes.textContainer} >
 
             <Typography  className={classes.content}>
-               <b>Production & Tee design </b> by 
-               <Link href="https://www.instagram.com/terraform___/?hl=en" target="_blank" className={classes.underlineHover}> Terraform</Link>
+               <b>Production & tee design </b> by  <Link href="https://www.instagram.com/terraform___/?hl=en" target="_blank" className={classes.underlineHover}>Terraform</Link>
 
             </Typography >
 
             <Typography  className={classes.content}>
-                <b>Photography</b> by 
-                <Link href="https://www.instagram.com/gabeoviawe/?hl=en" target="_blank" className={classes.underlineHover}> Gabe Oviawe</Link>
+                <b>Photography</b> by  <Link href="https://www.instagram.com/gabeoviawe/?hl=en" target="_blank" className={classes.underlineHover}> Gabe Oviawe</Link>
 
             </Typography >
 
             <Typography  className={classes.content}>
-                <b>Modeled</b> by 
-                <Link href="https://www.instagram.com/jarcor__/?hl=en" target="_blank" className={classes.underlineHover}> Jem Mendoza </Link>
+                <b>Modeled</b> by            <Link href="https://www.instagram.com/jarcor__/?hl=en" target="_blank" className={classes.underlineHover}> Jem Mendoza </Link>
                 
             </Typography >
 
             <Typography  className={classes.content}>
-                <b>Casting, styling, & direction</b> by <Link href="https://www.instagram.com/hugomaxwelll/" target="_blank" className={classes.underlineLink}> Hugo Garibaldi</Link>
+                <b>Casting, styling, & direction</b> by  <Link href="https://www.instagram.com/hugomaxwelll/" target="_blank" className={classes.underlineHover}>Hugo Garibaldi</Link>
 
             </Typography >
     </div>
