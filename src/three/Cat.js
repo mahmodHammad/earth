@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import { sceneSetup, scene ,controls} from "./setup";
 import { startAnimationLoop ,requestID} from "./Animate";
 import { makeStyles } from '@material-ui/core/styles';
@@ -19,22 +19,28 @@ const useStyles = makeStyles((theme) => ({
 export default function Cat( ) {
   const classes = useStyles();
   const textInput = useRef(null);
-
+  const [rotate,setrotate]=useState(true)
   useEffect(() => {
       if(scene){
         console.log("HEU SCENE",scene)
         scene.clear()
       }
+      if(rotate){
+        console.log("ROOOOTATE",rotate)
+        startAnimationLoop();
+        setrotate(false)
+      }
       const canvasTarget = textInput.current;
       sceneSetup(canvasTarget);
-      startAnimationLoop();
-    
     return () => {
       // Anything in here is fired on component unmount.
-      // window.cancelAnimationFrame(requestID);
-          // controls.dispose();
+      window.cancelAnimationFrame(requestID);
+          controls.dispose();
   }
-  }, []);
+  },[]
+    // window.cancelAnimationFrame(requestID)
+  
+  );
 
   return (
     <div className={classes.body}>
