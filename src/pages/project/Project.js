@@ -22,7 +22,8 @@ const useStyles = makeStyles(theme => ({
     display:"flex",
     justifyContent:"center",
     background:"#080808",
-    paddingTop: 60,
+    padding:"60px 10px 0",
+
     minHeight:"100vh",
     // textAlign: "center"
   },
@@ -47,11 +48,11 @@ const useStyles = makeStyles(theme => ({
     marginBottom:30,
     marginTop:30,
     // fontSize:30,
-    fontSize: "1.2rem"
+    fontSize: "1rem"
  },
  link:{
      textDecoration:"underline",
-     fontSize: "1.2rem",
+     fontSize: "1rem",
      fontWeight:"bold",
      display:"block",
      textAlign:"center",
