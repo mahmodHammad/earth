@@ -16,12 +16,19 @@ const useStyles = makeStyles((theme) => ({
     marginTop:90
 
   },
+  imgcontainer:{
+    width:"100%",
+    marginBottom:20,
+  },
   imageList: {
-    maxWidth: 700,
+    maxWidth: 800,
     // height:200
+  },img:{
+    width:"100%"
   },
   imageListPhone: {
-    maxWidth: 500,
+    // maxWidth: 500,
+    width:"100%"
     // height:200
   },
   col:{
@@ -60,13 +67,13 @@ export default function BasicImageList() {
       </GridList>
 </Hidden>
 <Hidden mdUp={true}>
-      <GridList spacing={25} cellHeight={600}  className={classes.imageListPhone} cols={1}>
+      <div className={classes.imageListPhone} >
         {allImages.map((item,index) => (
-         index!== allImages.length-1?<GridListTile key={index*100} cols={item[1] || 1}>
-            <img src={item[0].default} alt={index} />
-          </GridListTile>:null
+         index!== allImages.length-221?<div className={classes.imgcontainer} key={index*100} >
+            <img className={classes.img} src={item[0].default} alt={index} />
+          </div>:null
         ))}
-      </GridList>
+      </div>
   </Hidden>
     </div>
   );
