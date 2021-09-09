@@ -22,14 +22,20 @@ const useStyles = makeStyles(theme => ({
     display:"flex",
     justifyContent:"center",
     background:"#080808",
-    paddingTop: 120,
+    paddingTop: 80,
     minHeight:"100vh",
     // textAlign: "center"
   },
   headerContainer:{
     display:"flex",
     justifyContent:"center",
-    marginBottom:90
+    marginBottom:80,
+    marginLeft:-11
+  },
+  "@media (max-width: 600px)": {
+    headerContainer:{
+        marginBottom:50,
+  },
   },
  header:{
     backgroundImage:`url(${header})`,

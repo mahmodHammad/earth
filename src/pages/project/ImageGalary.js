@@ -62,7 +62,7 @@ export default function BasicImageList() {
       </GridList>
 </Hidden>
 <Hidden mdUp={true}>
-      <GridList spacing={12} cellHeight={800}  className={classes.imageListPhone} cols={1}>
+      <GridList spacing={12} cellHeight={600}  className={classes.imageListPhone} cols={1}>
         {allImages.map((item,index) => (
          index!== allImages.length-1?<GridListTile key={index*100} cols={item[1] || 1}>
             <img src={item[0].default} alt={index} />
