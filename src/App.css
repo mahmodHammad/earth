@@ -7,14 +7,18 @@ body {
 }
 
 canvas {
-  display: hidden;
+  /* display: none; */
   max-height:100vh !important;
   width: 100vw !important;
+  height: 100vh  !important;
+
   overflow:hidden;
 }
 .canvas{
   /* display: none; */
   width: 100vw !important;
+  height: 100vh !important;
+  overflow: hidden;
 
 }
 .App{
