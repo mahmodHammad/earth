@@ -27,8 +27,11 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 500,
     // height:200
   },
+  col:{
+    height :"500px",
+    // display:"none"
+  }
 }));
-
 const allImages = [
     [require("../../Images/Product Pic.png")],
     [require("../../Images/Photo 1.png")],
@@ -45,24 +48,22 @@ const allImages = [
     [require("../../Images/Photo 12.png")],
     [require("../../Images/Photo 13.png"),2],
 ]
-
 export default function BasicImageList() {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
 
 <Hidden smDown={true}>
-<GridList spacing={12} cellHeight={500}  className={classes.imageList} cols={2}>
+<GridList spacing={25}  className={classes.imageList} cols={2}>
         {allImages.map((item,index) => (
-         index!== allImages.length-2? <GridListTile key={index*100} cols={item[1] || 1}>
+         index!== allImages.length-2? <GridListTile className={classes.col} key={index*100} cols={item[1] || 1}>
             <img src={item[0].default} alt={index} />
           </GridListTile>:null
         ))}
       </GridList>
 </Hidden>
 <Hidden mdUp={true}>
-      <GridList spacing={12} cellHeight={600}  className={classes.imageListPhone} cols={1}>
+      <GridList spacing={25} cellHeight={600}  className={classes.imageListPhone} cols={1}>
         {allImages.map((item,index) => (
          index!== allImages.length-1?<GridListTile key={index*100} cols={item[1] || 1}>
             <img src={item[0].default} alt={index} />

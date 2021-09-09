@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     display:"flex",
     justifyContent:"center",
     marginBottom:80,
-    marginLeft:-11
+    marginLeft:-8
   },
   "@media (max-width: 600px)": {
     headerContainer:{
@@ -47,11 +47,11 @@ const useStyles = makeStyles(theme => ({
     marginBottom:30,
     marginTop:30,
     // fontSize:30,
-    fontSize: "1.3rem"
+    fontSize: "1.2rem"
  },
  link:{
      textDecoration:"underline",
-     fontSize: "1.3rem",
+     fontSize: "1.2rem",
      fontWeight:"bold",
      display:"block",
      textAlign:"center",

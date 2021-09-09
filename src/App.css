@@ -10,6 +10,13 @@ body {
   border: 1px solid #ff0;
   height: 100%;
 }
+.MuiGridListTile-root{
+  max-height: 540px !important;
+  /* height: 100% !important; */
+}
+li{
+  height:  100% !important;
+}
 canvas {
   display: hidden;
   max-height:100% !important;
