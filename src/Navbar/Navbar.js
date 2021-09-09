@@ -65,10 +65,10 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
                 color="primary"
                 component={Link}
                 to={{
-                  pathname: "/projects",
+                  pathname: "/project",
                 }}
               >
-              Projects
+              em tee
               </Button>:  <div className={classes.badgeContainer} onClick={()=>toggleDrawer(true)}>
               <Badge className={classes.badge} badgeContent={itemsNumberOnCart} color="primary">
                  <ShoppingCartIcon onClick={()=>toggleDrawer(true)} color="primary" fontSize="small" />

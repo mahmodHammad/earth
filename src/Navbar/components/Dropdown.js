@@ -73,10 +73,10 @@ if(e.target.tagName==="CANVAS"){
               fullWidth
               component={Link}
               to={{
-                pathname: "/projects",
+                pathname: "/project",
               }}
             >
-              Projects
+              em tee
             </Button>
             <Divider />
           </Paper>
