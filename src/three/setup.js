@@ -15,7 +15,7 @@ let height = window.innerHeight;
 const renderer = new THREE.WebGLRenderer({
   // alpha: true,
   powerPreference: "high-performance",
-  antialias: true,
+  antialias: false,
   logarithmicDepthBuffer:true,
 });
 
@@ -68,7 +68,7 @@ function setupControls(speed) {
 const handleWindowResize = () => {
   width = window.innerWidth;
   height = window.innerHeight;
-
+  console.log("HEY",document.body.innerWidth)
   renderer.setSize(width, height);
   camera.aspect = width / height;
   camera.updateProjectionMatrix();

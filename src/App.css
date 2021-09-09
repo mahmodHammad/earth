@@ -3,23 +3,25 @@ body {
   overflow-x: hidden;
   height:100vh;
   width: 100vw !important;
+  background-color: #050505 !important;
   /* background: radial-gradient(circle, #eaeaea 0%, #777 100%); */
 }
-
+#root{
+  border: 1px solid #ff0;
+  height: 100%;
+}
 canvas {
-  /* display: none; */
-  max-height:100vh !important;
+  display: hidden;
+  max-height:100% !important;
   width: 100vw !important;
-  height: 100vh  !important;
-
   overflow:hidden;
 }
 .canvas{
   /* display: none; */
   width: 100vw !important;
-  height: 100vh !important;
-  overflow: hidden;
-
+  height: 100%;
+  border: 1px solid green;
+  overflow: hidden !important;
 }
 .App{
   /* width: 30vw !important; */
