@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     display:"flex",
     justifyContent:"center",
     background:"#080808",
-    paddingTop: 80,
+    paddingTop: 60,
     minHeight:"100vh",
     // textAlign: "center"
   },
@@ -39,8 +39,8 @@ const useStyles = makeStyles(theme => ({
   },
  header:{
     backgroundImage:`url(${header})`,
-    width:"400px",
-    height:"400px",
+    width:"250px",
+    height:"250px",
     backgroundSize: "cover"
  },
  content:{
