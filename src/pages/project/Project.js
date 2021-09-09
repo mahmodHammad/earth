@@ -22,8 +22,7 @@ const useStyles = makeStyles(theme => ({
     display:"flex",
     justifyContent:"center",
     background:"#080808",
-    padding:"60px 10px 0",
-
+    padding:"80px 00px 0",
     minHeight:"100vh",
     // textAlign: "center"
   },
@@ -37,22 +36,33 @@ const useStyles = makeStyles(theme => ({
     headerContainer:{
         marginBottom:50,
   },
+  content:{
+    fontSize: "1rem"
+  },root:{
+    padding:"60px 10px 0",
+  },header:{
+    width:"280px",
+    height:"280px",
+  },
+  link:{
+     fontSize: "1rem",
+  }
   },
  header:{
     backgroundImage:`url(${header})`,
-    width:"280px",
-    height:"280px",
+    width:"400px",
+    height:"400px",
     backgroundSize: "cover"
  },
  content:{
     marginBottom:30,
     marginTop:30,
     // fontSize:30,
-    fontSize: "1rem"
+    fontSize: "1.4rem"
  },
  link:{
      textDecoration:"underline",
-     fontSize: "1rem",
+     fontSize: "1.4rem",
      fontWeight:"bold",
      display:"block",
      textAlign:"center",
