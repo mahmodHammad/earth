@@ -39,8 +39,8 @@ const useStyles = makeStyles(theme => ({
   },
  header:{
     backgroundImage:`url(${header})`,
-    width:"250px",
-    height:"250px",
+    width:"280px",
+    height:"280px",
     backgroundSize: "cover"
  },
  content:{

@@ -13,17 +13,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     // backgroundColor: theme.palette.background.paper,
-    borderRadius:10,
     marginTop:90
 
   },
   imageList: {
-    borderRadius:10,
     maxWidth: 700,
     // height:200
   },
   imageListPhone: {
-    borderRadius:10,
     maxWidth: 500,
     // height:200
   },
