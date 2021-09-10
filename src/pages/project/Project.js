@@ -81,6 +81,7 @@ const useStyles = makeStyles(theme => ({
 export default function Projec({ }) {
   const classes = useStyles();
   useEffect(() => {
+      window.scrollTo(0,0)
     // const info = AllProjects.find(e => e.id === projId);
   });
 

@@ -7,7 +7,7 @@ body {
   /* background: radial-gradient(circle, #eaeaea 0%, #777 100%); */
 }
 #root{
-  border: 1px solid #ff0;
+  /* border: 1px solid #ff0; */
   height: 100%;
 }
 .MuiGridListTile-root{
@@ -27,7 +27,7 @@ canvas {
   /* display: none; */
   width: 100vw !important;
   height: 100%;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   overflow: hidden !important;
 }
 .App{

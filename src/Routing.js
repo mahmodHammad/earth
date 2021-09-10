@@ -149,7 +149,7 @@ const setsize=(itemID,newsize)=>{
   }
 
   return (
-        <div style={{ border: "1px solid #00f" ,minHeight:"100%"}}>
+        <div style={{ minHeight:"100%"}}>
        
             <BrowserRouter>
             <Navbar
