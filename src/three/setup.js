@@ -81,7 +81,7 @@ const handleWindowResize = () => {
 // ----------------------------------------------> setup
 const sceneSetup = (root) => {
   console.log("ROTTTT:,",root.offsetWidth)
-  console.log("RfOTTTT:,",root.offsetHeight)
+  console.log("RfOTTTT:,",root.clientHeight)
   // console.log("fuck:,",root)
   renderer.setSize(document.body.offsetWidth , document.body.offsetHeight);
   camera.aspect = document.body.offsetWidth/ document.body.offsetHeight;
