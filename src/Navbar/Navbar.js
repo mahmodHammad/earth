@@ -47,7 +47,9 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
         <AppBar color="transparent" className={classes.nav}>
           <Toolbar>
             <div className={classes.logoContainer}>
-              <IconButton disableRipple={false} color="secondary" component={Link} to="/" size="large">
+              <IconButton disableRipple={false} color="secondary"  onClick={()=>{
+                  window.scrollTo(0,0)
+                }} component={Link} to="/" size="large">
                   <img
                   className={classes.logo}
                   src={logo}
@@ -63,6 +65,9 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
                 className={classes.study}
                 variant="outlined"
                 color="primary"
+                onClick={()=>{
+                  window.scrollTo(0,0)
+                }}
                 component={Link}
                 to={{
                   pathname: "/project",

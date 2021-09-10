@@ -68,9 +68,13 @@ function setupControls(speed) {
 const handleWindowResize = () => {
   width = window.innerWidth;
   height = window.innerHeight;
+
+  renderer.setSize(document.body.offsetWidth , document.body.offsetHeight);
+  camera.aspect = document.body.offsetWidth/ document.body.offsetHeight;
+
   console.log("HEY",document.body.innerWidth)
-  renderer.setSize(width, height);
-  camera.aspect = width / height;
+  // renderer.setSize(width, height);
+  // camera.aspect = width / height;
   camera.updateProjectionMatrix();
 
 };
@@ -79,8 +83,8 @@ const sceneSetup = (root) => {
   console.log("ROTTTT:,",root.offsetWidth)
   console.log("RfOTTTT:,",root.offsetHeight)
   // console.log("fuck:,",root)
-  renderer.setSize(root.offsetWidth , height);
-  camera.aspect = root.offsetWidth / height;
+  renderer.setSize(document.body.offsetWidth , document.body.offsetHeight);
+  camera.aspect = document.body.offsetWidth/ document.body.offsetHeight;
   root.appendChild(renderer.domElement);
   window.addEventListener("resize", handleWindowResize);
   if (settings.developmentModel) {
