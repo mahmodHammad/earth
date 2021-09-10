@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
   body:{
     overflow:"hidden",
-    height:"100%",
+    height:"100vh",
     width:"100vw",
     border:"1px solid red",
     background:"#050505"
@@ -24,11 +24,9 @@ export default function Cat( ) {
   const [rotate,setrotate]=useState(true)
   useEffect(() => {
       if(scene){
-        console.log("HEU SCENE",scene)
         scene.clear()
       }
       if(rotate){
-        console.log("ROOOOTATE",rotate)
         startAnimationLoop();
         setrotate(false)
       }
@@ -37,7 +35,7 @@ export default function Cat( ) {
     return () => {
       // Anything in here is fired on component unmount.
       window.cancelAnimationFrame(requestID);
-          controls.dispose();
+          // controls.dispose();
   }
   },[]
     // window.cancelAnimationFrame(requestID)

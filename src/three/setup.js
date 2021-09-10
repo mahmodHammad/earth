@@ -13,7 +13,7 @@ let width = window.innerWidth;
 let height = window.innerHeight;
 // ----------------------------------------------> render
 const renderer = new THREE.WebGLRenderer({
-  // alpha: true,
+  alpha: true,
   powerPreference: "high-performance",
   antialias: false,
   logarithmicDepthBuffer:true,
@@ -25,7 +25,7 @@ function render() {
 }
 // ----------------------------------------------> scene
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x050505);
+// scene.background = new THREE.Color(0x050505);
 // ----------------------------------------------> camera
 const camera = new THREE.PerspectiveCamera(
   50, // fov = field of view
