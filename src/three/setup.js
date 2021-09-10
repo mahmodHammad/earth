@@ -70,8 +70,8 @@ const handleWindowResize = () => {
   height = window.innerHeight;
   console.log("HEY",document.body.innerWidth)
  
-  renderer.setSize(document.body.clientWidth , document.body.clientHeight);
-  camera.aspect = document.body.clientWidth / document.body.clientHeight;
+  renderer.setSize(window.outerWidth , window.outerHeight);
+  camera.aspect = window.outerWidth / window.outerHeight;
   camera.updateProjectionMatrix();
 
 };
@@ -80,8 +80,8 @@ const sceneSetup = (root) => {
   console.log("ROTTTT:,",root.offsetWidth)
   console.log("RfOTTTT:,",root.offsetHeight)
   // console.log("fuck:,",root)
-  renderer.setSize(document.body.offsetWidth , document.body.offsetHeight);
-  camera.aspect = document.body.offsetWidth / document.body.offsetHeight;
+  renderer.setSize(window.outerWidth , window.outerHeight);
+  camera.aspect = window.outerWidth / window.outerHeight;
   root.appendChild(renderer.domElement);
   window.addEventListener("resize", handleWindowResize);
   if (settings.developmentModel) {
