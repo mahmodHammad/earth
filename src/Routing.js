@@ -4,6 +4,7 @@ import Cat from "./three/Cat"
 import Shop from "./pages/shop/Shop"
 import Projects from "./pages/projects/Projects"
 import Project from "./pages/project/Project"
+import Providence from "./pages/project/Providence"
 
 import Checkout from "./pages/checkout/Checkout"
 import { makeStyles } from "@material-ui/core/styles";
@@ -166,6 +167,7 @@ const setsize=(itemID,newsize)=>{
                 <Route exact path="/shop" render={props => <Shop cartData={cartData} addToCart={addToCart} toggleDrawer={toggleDrawer} products={products}/>}/>
                 <Route exact path="/projects" render={props => <Projects/> }/>
                 <Route exact path="/project" render={props => <Project/> }/>
+                <Route exact path="/providence" render={props => <Providence/> }/>
                 <Route exact path="/checkout" render={props => <Checkout cartData={cartData}/>} />
               </Switch>
               {/* <Footer /> */}
