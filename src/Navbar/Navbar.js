@@ -58,41 +58,7 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
                 
               </IconButton>
             </div>
-
-            <Hidden smDown={true}>
-            {isHomePage? <Button
-                size="large"
-                className={classes.study}
-                variant="outlined"
-                color="primary"
-                onClick={()=>{
-                  window.scrollTo(0,0)
-                }}
-                component={Link}
-                to={{
-                  pathname: "/project",
-                }}
-              >
-              em tee
-              </Button>:  <div className={classes.badgeContainer} onClick={()=>toggleDrawer(true)}>
-              <Badge className={classes.badge} badgeContent={itemsNumberOnCart} color="primary">
-                 <ShoppingCartIcon onClick={()=>toggleDrawer(true)} color="primary" fontSize="small" />
-              </Badge>
-             </div> }
-            </Hidden>
-
-            <Hidden mdUp={true}>
               <Dropdwon toggleDrawer={toggleDrawer}  />
-            {/* {isHomePage?
-              : 
-             <div className={classes.badgeContainer} onClick={()=>toggleDrawer(true)}>
-              <Badge className={classes.badge} badgeContent={itemsNumberOnCart} color="primary">
-                 <ShoppingCartIcon onClick={()=>toggleDrawer(true)} color="primary" fontSize="small" />
-              </Badge>
-             </div> 
-
-            } */}
-            </Hidden>
           </Toolbar>
         </AppBar>
     </div>
