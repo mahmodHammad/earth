@@ -33,6 +33,12 @@ canvas {
 .App{
   /* width: 30vw !important; */
 }
+.MuiIconButton-label {
+  display:block !important;
+}
+.MuiDrawer-paperAnchorRight{
+  background:#000 !important;
+}
 .MuiDrawer-paper{
   /* background: #050505 !important; */
 }

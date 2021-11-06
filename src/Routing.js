@@ -96,7 +96,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Projec({ Cart,theme }) {
   const classes = useStyles();
-  const [draweOpen, SetdraweOpen] = useState(false);
+  const [draweOpen, SetdraweOpen] = useState(true);
   const [cartData, SetcartData] = useState([
   ]);
 
@@ -117,6 +117,7 @@ const setsize=(itemID,newsize)=>{
 }
  
   const toggleDrawer = ( open) => {
+    console.log("opeennnn",open)
     // if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
     //   return;
     // }
@@ -157,7 +158,7 @@ const setsize=(itemID,newsize)=>{
           isHomePage={true}
           isDarkMode={true}
           draweOpen={()=>console.log("")}
-          toggleDrawer={()=>console.log("")}
+          toggleDrawer={toggleDrawer}
         />
             <Drawer removeItem={removeItem} setsize={setsize} increaseQuantitly={increaseQuantitly} toggleDrawer={toggleDrawer} draweOpen={draweOpen}cartData={cartData} />
               <Switch>

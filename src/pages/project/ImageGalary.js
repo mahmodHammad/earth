@@ -62,7 +62,7 @@ export default function BasicImageList() {
 <GridList spacing={25}  className={classes.imageList} cols={2}>
         {allImages.map((item,index) => (
          index!== allImages.length-2? <GridListTile className={classes.col} key={index*100} cols={item[1] || 1}>
-           <SimpleImg height={item[1]?518: 600} width={item[1]?"100%":null} src={item[0].default} />
+           <SimpleImg height={item[1]?518: "100%"} width="100%" src={item[0].default} />
           </GridListTile>:null
         ))}
       </GridList>
@@ -71,7 +71,7 @@ export default function BasicImageList() {
       <div className={classes.imageListPhone} >
         {allImages.map((item,index) => (
          index!== allImages.length-2?<div className={classes.imgcontainer} key={index*100} >
-           <SimpleImg className={classes.img} height={400} alt={index} src={item[0].default} />
+           <SimpleImg className={classes.img}  height="100%" width="100%" alt={index} src={item[0].default} />
           </div>:null
         ))}
       </div>
