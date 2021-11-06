@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 800,
     // height:200
   },img:{
-    width:"100%"
+    width:"100%",
+    height:"100%"
   },
   imageListPhone: {
     // maxWidth: 500,
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     // height:200
   },
   col:{
-    height :"500px",
+    height :"600px",
     // display:"none"
   }
 }));
@@ -72,7 +73,7 @@ export default function BasicImageList() {
 <GridList spacing={25}  className={classes.imageList} cols={2}>
         {allImages.map((item,index) => (
          index!== allImages.length-2? <GridListTile className={classes.col} key={index*100} cols={item[1] || 1}>
-           <SimpleImg src={item[0].default} />;
+           <SimpleImg height={600} src={item[0].default} />
 
           </GridListTile>:null
         ))}
@@ -81,8 +82,8 @@ export default function BasicImageList() {
 <Hidden mdUp={true}>
       <div className={classes.imageListPhone} >
         {allImages.map((item,index) => (
-         index!== allImages.length-221?<div className={classes.imgcontainer} key={index*100} >
-           <SimpleImg className={classes.img} src={item[0].default} />;
+         index!== allImages.length-2?<div className={classes.imgcontainer} key={index*100} >
+           <img className={classes.img} src={item[0].default} />;
 
           </div>:null
         ))}
