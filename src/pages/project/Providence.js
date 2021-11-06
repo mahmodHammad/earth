@@ -52,6 +52,7 @@ const useStyles = makeStyles(theme => ({
      textDecoration:"underline"
  },
  textContainer:{
+  //  maxWidth:800,
      marginTop:60,
      marginBottom:200,
      padding:"0 225px",
@@ -97,7 +98,7 @@ export default function Projec({ }) {
             </div>
 
             <Typography className={`${classes.content}  ${classes.center}`}  variant="body1">
-              Providence Capsule By  <Link href="https://www.youtube.com/watch?v=LajvidhBK2Y&list=LL&index=4" target="_blank" className={classes.link}>Petrichor</Link>-
+              Providence Capsule By  <Link href="https://www.instagram.com/_petrich0r.us/" target="_blank" className={classes.link}>Petrichor</Link>-
             </Typography>
 
             <Typography className={`${classes.content}  ${classes.center}`} variant="body1">

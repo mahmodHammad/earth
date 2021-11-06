@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import Hidden from '@material-ui/core/Hidden';
+import { SimpleImg } from 'react-simple-img';
 
 
 
@@ -61,7 +62,7 @@ export default function BasicImageList() {
 <GridList spacing={25}  className={classes.imageList} cols={2}>
         {allImages.map((item,index) => (
          index!== allImages.length-2? <GridListTile className={classes.col} key={index*100} cols={item[1] || 1}>
-            <img src={item[0].default} alt={index} />
+           <SimpleImg height={item[1]?518: 600} width={item[1]?"100%":null} src={item[0].default} />
           </GridListTile>:null
         ))}
       </GridList>
@@ -69,8 +70,8 @@ export default function BasicImageList() {
 <Hidden mdUp={true}>
       <div className={classes.imageListPhone} >
         {allImages.map((item,index) => (
-         index!== allImages.length-221?<div className={classes.imgcontainer} key={index*100} >
-            <img className={classes.img} src={item[0].default} alt={index} />
+         index!== allImages.length-2?<div className={classes.imgcontainer} key={index*100} >
+           <SimpleImg className={classes.img} height={400} alt={index} src={item[0].default} />
           </div>:null
         ))}
       </div>
