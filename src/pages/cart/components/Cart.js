@@ -166,23 +166,7 @@ export default function Cart({removeItem,setsize,increaseQuantitly,cartData,togg
         </div>
       </div>
     </React.Fragment>:<div className={classes.empty}>    
-    <Typography className={classes.emptyText}>
-          cart empty!
-        </Typography>
-
-      
-       <Button
-       fullWidth
-            className={classes.button}
-            size="small"
-            color="primary"
-            variant="outlined"
-            onClick={()=>{
-              toggleDrawer( false)}
-            }
-            >
-            Continue shopping
-            </Button>  </div>}
+   </div>}
 
     </div>
   );

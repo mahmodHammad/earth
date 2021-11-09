@@ -10,7 +10,7 @@ import Badge from "@material-ui/core/Badge";
 import IconButton from "@material-ui/core/IconButton";
 import Dropdwon from "./components/Dropdown";
 import logo from "../assets/logo.png"
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles(theme => ({
   logoContainer: {
@@ -47,9 +47,7 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
         <AppBar color="transparent" className={classes.nav}>
           <Toolbar>
             <div className={classes.logoContainer}>
-              <IconButton disableRipple={false} color="secondary"  onClick={()=>{
-                  window.scrollTo(0,0)
-                }} component={Link} to="/" size="large">
+              <IconButton disableRipple={false} color="secondary" component={Link} to="/" size="large">
                   <img
                   className={classes.logo}
                   src={logo}
@@ -59,40 +57,13 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
               </IconButton>
             </div>
 
-            <Hidden smDown={true}>
-            {isHomePage? <Button
-                size="large"
-                className={classes.study}
-                variant="outlined"
-                color="primary"
-                onClick={()=>{
-                  window.scrollTo(0,0)
-                }}
-                component={Link}
-                to={{
-                  pathname: "/project",
-                }}
-              >
-              em tee
-              </Button>:  <div className={classes.badgeContainer} onClick={()=>toggleDrawer(true)}>
-              <Badge className={classes.badge} badgeContent={itemsNumberOnCart} color="primary">
-                 <ShoppingCartIcon onClick={()=>toggleDrawer(true)} color="primary" fontSize="small" />
-              </Badge>
-             </div> }
-            </Hidden>
 
-            <Hidden mdUp={true}>
-              <Dropdwon toggleDrawer={toggleDrawer}  />
-            {/* {isHomePage?
-              : 
-             <div className={classes.badgeContainer} onClick={()=>toggleDrawer(true)}>
+              <div className={classes.badgeContainer} onClick={()=>toggleDrawer(true)}>
               <Badge className={classes.badge} badgeContent={itemsNumberOnCart} color="primary">
-                 <ShoppingCartIcon onClick={()=>toggleDrawer(true)} color="primary" fontSize="small" />
+                 <MenuIcon onClick={()=>toggleDrawer(true)} color="primary" fontSize="small" />
               </Badge>
              </div> 
 
-            } */}
-            </Hidden>
           </Toolbar>
         </AppBar>
     </div>

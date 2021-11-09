@@ -78,6 +78,18 @@ if(e.target.tagName==="CANVAS"){
             >
               em tee
             </Button>
+            <Button
+                size="small"
+                color="primary"
+                onClick={()=> setOpen(false)}
+                fullWidth
+                component={Link}
+                to={{
+                  pathname: "/Providence",
+                }}
+              >
+              Providence
+              </Button>
             <Divider />
           </Paper>
           </Slide>
