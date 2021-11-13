@@ -10,8 +10,8 @@ const useStyles = makeStyles((theme) => ({
   },
   body:{
     overflow:"hidden",
-    height:"100vh",
-    width:"100vw",
+    height:"100%",
+    width:"100%",
     // border:"1px solid red",
     background:"#050505",
     display:"flex",
