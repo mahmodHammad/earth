@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import Hidden from '@material-ui/core/Hidden';
-import { SimpleImg } from 'react-simple-img';
+import { SimpleImg } from './lazy';
 
 
 
