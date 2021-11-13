@@ -83,7 +83,7 @@ export default function BasicImageList() {
       <div className={classes.imageListPhone} >
         {allImages.map((item,index) => (
          index!== allImages.length-2?<div className={classes.imgcontainer} key={index*100} >
-           <SimpleImg height="100%" width="100%" className={classes.img} src={item[0].default} />
+           <SimpleImg animationDuration={1} style={{background:"#000"}} height="100%" width="100%" className={classes.img} src={item[0].default} />
 
           </div>:null
         ))}

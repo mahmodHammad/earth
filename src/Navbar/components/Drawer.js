@@ -19,6 +19,7 @@ const useStyles = makeStyles({
       borderRadius:0,
       display:"block",
       textAlign:"right",
+      fontSize:18,
       paddingRight:30
     },btnIcon:{
 
