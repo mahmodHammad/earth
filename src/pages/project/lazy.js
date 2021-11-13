@@ -469,7 +469,7 @@ var commonStyle = {
   height: '100%'
 };
 var defaultImgPlaceholder = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
-var defaultPlaceholderColor = 'black';
+var defaultPlaceholderColor = '#080808';
 var hiddenStyle = {
   visibility: 'hidden'
 };
