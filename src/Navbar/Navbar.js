@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
@@ -6,6 +6,7 @@ import Hidden from "@material-ui/core/Hidden";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Badge from "@material-ui/core/Badge";
+import Drawer from "./components/Drawer"
 
 import IconButton from "@material-ui/core/IconButton";
 import Dropdwon from "./components/Dropdown";
@@ -39,11 +40,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
+export default function Navbar({  isHomePage,cartData}) {
+const [draweOpen, SetdraweOpen] = useState(false);
+
   const classes = useStyles();
-  const itemsNumberOnCart= isHomePage?0:cartData.length
+
   return (
     <div>
+            <Drawer   toggleDrawer={(open)=>SetdraweOpen(open)} draweOpen={draweOpen}  />
+
         <AppBar color="transparent" className={classes.nav}>
           <Toolbar>
             <div className={classes.logoContainer}>
@@ -58,10 +63,8 @@ export default function Navbar({ toggleDrawer ,isHomePage,cartData}) {
             </div>
 
 
-              <div className={classes.badgeContainer} onClick={()=>toggleDrawer(true)}>
-              <Badge className={classes.badge} badgeContent={itemsNumberOnCart} color="primary">
-                 <MenuIcon onClick={()=>toggleDrawer(true)} color="primary" fontSize="small" />
-              </Badge>
+              <div className={classes.badgeContainer} onClick={()=>SetdraweOpen(true)}>
+                 <MenuIcon   color="primary" fontSize="small" />
              </div> 
 
           </Toolbar>

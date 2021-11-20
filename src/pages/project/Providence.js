@@ -41,7 +41,8 @@ const useStyles = makeStyles(theme => ({
 
  link:{
      textDecoration:"underline",
-     fontSize: "0.9rem",
+     fontSize: "1.4rem",
+
      fontWeight:"bold",
      display:"inline",
      textAlign:"center",
@@ -62,7 +63,8 @@ const useStyles = makeStyles(theme => ({
    textAlign:"center"
  },
  content:{
-  fontSize:"0.9rem"
+  fontSize: "1.4rem"
+
 },
  "@media (max-width: 600px)": {
  textContainer:{
@@ -75,6 +77,9 @@ root:{
 },header:{
   width:"280px",
   height:"280px",
+},
+content:{
+  fontSize: "1rem"
 },
 link:{
    fontSize: "1rem",

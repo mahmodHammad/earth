@@ -32,22 +32,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom:80,
     marginLeft:-8
   },
-  "@media (max-width: 600px)": {
-    headerContainer:{
-        marginBottom:50,
-  },
-  content:{
-    fontSize: "1rem"
-  },root:{
-    padding:"60px 10px 0",
-  },header:{
-    width:"280px",
-    height:"280px",
-  },
-  link:{
-     fontSize: "1rem",
-  }
-  },
+
  header:{
     backgroundImage:`url(${header})`,
     width:"400px",
@@ -75,7 +60,23 @@ const useStyles = makeStyles(theme => ({
  textContainer:{
      marginTop:60,
      marginBottom:200
- }
+ },
+ "@media (max-width: 600px)": {
+  headerContainer:{
+      marginBottom:50,
+},
+content:{
+  fontSize: "1rem"
+},root:{
+  padding:"60px 10px 0",
+},header:{
+  width:"280px",
+  height:"280px",
+},
+link:{
+   fontSize: "1rem",
+}
+},
 }));
 
 export default function Projec({ }) {

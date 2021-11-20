@@ -33,47 +33,47 @@ const useStyles = makeStyles({
 
 });
 
-export default function TemporaryDrawer({removeItem,setsize,increaseQuantitly,draweOpen,toggleDrawer,cartData}) {
+export default function TemporaryDrawer({draweOpen,toggleDrawer,cartData}) {
  
     useEffect(() => {
-        
+
         // const info = AllProjects.find(e => e.id === projId);
-      },[cartData]);
+      });
     
     const classes = useStyles();
   return (
     <Drawer className={classes.root} anchor="right" open={draweOpen} onClose={()=>toggleDrawer( false)}>
       
-              <IconButton    className={classes.btnIcon} disableRipple={true} color="primary" onClick={()=>toggleDrawer(false)} size="large">
-                <MenuIcon  color="primary" fontSize="small" />                
-              </IconButton>
-            <Button
-              size="small"
-              color="primary"
-              className={classes.btn}
-              onClick={()=> toggleDrawer(false)}
-              fullWidth
-              component={Link}
-              to={{
-                pathname: "/project",
-              }}
-            >
-              em tee
-            </Button>
+        <IconButton    className={classes.btnIcon} disableRipple={true} color="primary" onClick={()=>toggleDrawer(false)} size="large">
+          <MenuIcon  color="primary" fontSize="small" />                
+        </IconButton>
+      <Button
+        size="small"
+        color="primary"
+        className={classes.btn}
+        onClick={()=> toggleDrawer(false)}
+        fullWidth
+        component={Link}
+        to={{
+          pathname: "/project",
+        }}
+      >
+        em tee
+      </Button>
 
-            <Button
-                size="small"
-                color="inherit"
-                className={classes.btn}
-                onClick={()=> toggleDrawer(false)}
-                fullWidth
-                component={Link}
-                to={{
-                  pathname: "/Providence",
-                }}
-              >
-              Providence
-              </Button>
+      <Button
+          size="small"
+          color="inherit"
+          className={classes.btn}
+          onClick={()=> toggleDrawer(false)}
+          fullWidth
+          component={Link}
+          to={{
+            pathname: "/Providence",
+          }}
+        >
+        Providence
+        </Button>
 
 
         {/* <CartItem removeItem={removeItem} setsize={setsize} increaseQuantitly={increaseQuantitly} cartData={cartData} toggleDrawer={toggleDrawer}/> */}

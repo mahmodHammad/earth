@@ -96,33 +96,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function Projec({ Cart,theme }) {
   const classes = useStyles();
-  const [draweOpen, SetdraweOpen] = useState(true);
   const [cartData, SetcartData] = useState([
-  ]);
-
-  const removeItem = (id)=>{
-    const newCart = cartData.filter(c=>c.id!==id)
-    SetcartData(newCart)
-  }
-
-const setsize=(itemID,newsize)=>{
-  const indd = cartData.findIndex(cd=>itemID===cd.id)
-  if(indd !==-1){
-    // EXISTED
-    
-   cartData[indd].size = newsize
-   const old = [...cartData]
-    SetcartData(old)
-  }
-}
- 
-  const toggleDrawer = ( open) => {
-    console.log("opeennnn",open)
-    // if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-    //   return;
-    // }
-    SetdraweOpen( open );
-  };
+  ]); 
 
   const addToCart = (item,openDrawer)=>{
     const newItem = {...item}
@@ -132,22 +107,7 @@ const setsize=(itemID,newsize)=>{
     newItem.id = uniqueID
     SetcartData([...cartData,newItem])
 
-    if(openDrawer){
-      SetdraweOpen( true );
-    }else{
-      
-    }
-  }
-
-  const increaseQuantitly = (itemID,sign=1)=>{
-    const indd = cartData.findIndex(cd=>itemID===cd.id)
-    if(indd !==-1){
-      // EXISTED
-      
-     cartData[indd].quan += sign
-     const old = [...cartData]
-      SetcartData(old)
-    }
+   
   }
 
   return (
@@ -155,17 +115,14 @@ const setsize=(itemID,newsize)=>{
        
             <BrowserRouter>
             <Navbar
-          isHomePage={true}
-          isDarkMode={true}
-          draweOpen={()=>console.log("")}
-          toggleDrawer={toggleDrawer}
+              isHomePage={true}
+              isDarkMode={true}
         />
-            <Drawer removeItem={removeItem} setsize={setsize} increaseQuantitly={increaseQuantitly} toggleDrawer={toggleDrawer} draweOpen={draweOpen}cartData={cartData} />
               <Switch>
                 <Route exact path="/" render={props => <Cat/>} />
                 <Route exact path="/dash" render={props => <Dash/>} />
                 <Route exact path="/success" render={props => <Sucess/>} />
-                <Route exact path="/shop" render={props => <Shop cartData={cartData} addToCart={addToCart} toggleDrawer={toggleDrawer} products={products}/>}/>
+                <Route exact path="/shop" render={props => <Shop cartData={cartData} addToCart={addToCart} toggleDrawer={()=>{}} products={products}/>}/>
                 <Route exact path="/projects" render={props => <Projects/> }/>
                 <Route exact path="/project" render={props => <Project/> }/>
                 <Route exact path="/providence" render={props => <Providence/> }/>
