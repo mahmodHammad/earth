@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageList: {
     maxWidth: 800,
-    // height:200
+    height:"100%"
   },img:{
     width:"100%",
     height:"100%"
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     // height:200
   },
   col:{
-    height :"600px",
+    // height :"900px",
     // display:"none"
   }
 }));
@@ -73,7 +73,7 @@ export default function BasicImageList() {
         {allImages.map((item,index) => (
          <GridListTile className={classes.col} key={index*100} cols={item[1] || 1}>
 
-           <SimpleImg height={600} src={item[0].default} />
+           <SimpleImg height={500} src={item[0].default} />
 
           </GridListTile>
         ))}

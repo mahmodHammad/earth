@@ -6,7 +6,6 @@ import Hidden from '@material-ui/core/Hidden';
 import { SimpleImg } from './lazy';
 
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -23,9 +22,10 @@ const useStyles = makeStyles((theme) => ({
   },
   imageList: {
     maxWidth: 800,
-    // height:200
+    // height:20000
   },img:{
-    width:"100%"
+    width:"100%",
+    height:"100%"
   },
   imageListPhone: {
     // maxWidth: 500,
@@ -33,10 +33,11 @@ const useStyles = makeStyles((theme) => ({
     // height:200
   },
   col:{
-    height :"500px",
+    height :"900px",
     // display:"none"
   }
 }));
+         
 const allImages = [
     [require("../../Images/Product Pic.png")],
     [require("../../Images/Photo 1.png")],
@@ -62,7 +63,7 @@ export default function BasicImageList() {
 <GridList spacing={25}  className={classes.imageList} cols={2}>
         {allImages.map((item,index) => (
          index!== allImages.length-2? <GridListTile className={classes.col} key={index*100} cols={item[1] || 1}>
-           <SimpleImg height={item[1]?518: "100%"} width="100%" src={item[0].default} />
+           <SimpleImg height={"100%"} src={item[0].default} />
           </GridListTile>:null
         ))}
       </GridList>
