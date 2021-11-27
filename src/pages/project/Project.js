@@ -58,15 +58,23 @@ const useStyles = makeStyles(theme => ({
      textDecoration:"underline"
  },
  textContainer:{
-     marginTop:60,
-     marginBottom:200
- },
+  width:800,
+
+ //  border:"1px solid red",
+    marginTop:60,
+
+    marginBottom:200,
+   //  padding:"0 225px",
+},
  "@media (max-width: 600px)": {
   headerContainer:{
       marginBottom:50,
 },
+textContainer:{
+  width:600
+},
 content:{
-  fontSize: "1rem"
+  // fontSize: "1rem"
 },root:{
   padding:"60px 10px 0",
 },header:{
@@ -74,7 +82,7 @@ content:{
   height:"280px",
 },
 link:{
-   fontSize: "1rem",
+  //  fontSize: "1rem",
 }
 },
 }));
@@ -94,7 +102,7 @@ export default function Projec({ }) {
             </div>
 
             <Typography className={classes.content} variant="body1">
-                The Extracellular Matrix (EM), or ECM is an
+                The Extracellular Matrix (EM), also known as the ECM or Interstitial Matrix, is an
                 extensive molecular network that exists
                 within the tissues and organs of every living
                 creature. Proteins, Glycosaminoglycan, and
@@ -123,15 +131,15 @@ export default function Projec({ }) {
             <Link href="https://www.youtube.com/watch?v=cMNx17H3dRU&list=LL&index=3" target="_blank" className={classes.link}>How cells interact with the ECM</Link>
             <ImageGalary/>
 
-<div className = {classes.textContainer} >
-
+        <div style={{display:"flex",justifyContent:"center"}}> 
+          <div className = {classes.textContainer} >
             <Typography  className={classes.content}>
                <b>Production & tee design </b> by  <Link href="https://www.instagram.com/terraform___/?hl=en" target="_blank" className={classes.underlineHover}>Terraform</Link>
 
             </Typography >
 
             <Typography  className={classes.content}>
-                <b>Photography</b> by  <Link href="https://www.instagram.com/gabeoviawe/?hl=en" target="_blank" className={classes.underlineHover}> Gabe Oviawe</Link>
+                <b>Photography & edits</b> by  <Link href="https://www.instagram.com/gabeoviawe/?hl=en" target="_blank" className={classes.underlineHover}> Gabe Oviawe</Link>
 
             </Typography >
 
@@ -141,11 +149,14 @@ export default function Projec({ }) {
             </Typography >
 
             <Typography  className={classes.content}>
-                <b>Casting, styling, & direction</b> by  <Link href="https://www.instagram.com/hugomaxwelll/" target="_blank" className={classes.underlineHover}>Hugo Garibaldi</Link>
+                <b>Casting, styling, direction, graphics & web design</b> by  <Link href="https://www.instagram.com/hugomaxwelll/" target="_blank" className={classes.underlineHover}>Hugo Garibaldi</Link>
 
             </Typography >
-    </div>
-
+            <Typography  className={classes.content}>
+                <b>Web development</b> by  <Link href="https://www.instagram.com/mahmoud.hammmad/" target="_blank" className={classes.underlineHover}>Mahmoud Hammad </Link>
+            </Typography >
+          </div>
+        </div>
         </Container>
     </div>
   );

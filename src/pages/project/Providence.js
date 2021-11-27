@@ -17,6 +17,10 @@ import header from "../../Images/EMblob.png"
 import ImageGalary from "./ProvGalary"
 
 const useStyles = makeStyles(theme => ({
+  body:{
+    // textAlign:"center",
+    // justifyContent:"center",
+  },
   root: {
     // padding: 10,
     display:"flex",
@@ -40,12 +44,12 @@ const useStyles = makeStyles(theme => ({
  },
 
  link:{
-     textDecoration:"underline",
+    //  textDecoration:"underline",
      fontSize: "1.4rem",
 
      fontWeight:"bold",
      display:"inline",
-     textAlign:"center",
+    //  textAlign:"center",
      marginBottom:20,
      marginTop:50,
  },
@@ -53,21 +57,29 @@ const useStyles = makeStyles(theme => ({
      textDecoration:"underline"
  },
  textContainer:{
-  //  maxWidth:800,
+   width:750,
+
+  //  border:"1px solid red",
      marginTop:60,
+
      marginBottom:200,
-     padding:"0 225px",
+    //  padding:"0 225px",
  },
  center:{
-   justifyContent:"center",
-   textAlign:"center"
+  //  justifyContent:"center",
+  //  textAlign:"center"
  },
  content:{
   fontSize: "1.4rem"
-
+},
+TextHeader:{
+  maxWidth:500,
+  // display:"flex",
+  // justifyContent:"center"
 },
  "@media (max-width: 600px)": {
  textContainer:{
+    width:600,
   padding:0 },
   headerContainer:{
       marginBottom:50,
@@ -79,11 +91,11 @@ root:{
   height:"280px",
 },
 content:{
-  fontSize: "1rem"
+  // fontSize: "1rem"
 },
 link:{
-   fontSize: "1rem",
-   display:"inline"
+  //  fontSize: "1rem",
+   display:"inline",
 }
 }
 }));
@@ -102,16 +114,21 @@ export default function Projec({ }) {
                 {/* <div className={classes.header} ></div> */}
             </div>
 
+<div style={{display:"flex",justifyContent:"center"}} >
+<div className={classes.TextHeader} >
             <Typography className={`${classes.content}  ${classes.center}`}  variant="body1">
               Providence Capsule By  <Link href="https://www.instagram.com/_petrich0r.us/" target="_blank" className={classes.link}>Petrichor</Link>-
             </Typography>
+            <br/>
 
             <Typography className={`${classes.content}  ${classes.center}`} variant="body1">
                 Protective care, spiritual power, & perpetration for timely eventualities
             </Typography>
+            </div>
+   </div>
 
                  <ImageGalary/>
-
+<div style={{display:"flex",justifyContent:"center"}}>
         <div className = {classes.textContainer} >
             <Typography  className={classes.content}>
                 <b>Production  </b> by  <Link href="https://www.instagram.com/terraform___/?hl=en" target="_blank" className={classes.underlineHover}>Terraform</Link>
@@ -138,6 +155,7 @@ export default function Projec({ }) {
             <Typography  className={classes.content}>
                 <b>Web development</b> by  <Link href="https://www.instagram.com/mahmoud.hammmad/" target="_blank" className={classes.underlineHover}>Mahmoud Hammad </Link>
             </Typography >
+        </div>
         </div>
         </Container>
     </div>

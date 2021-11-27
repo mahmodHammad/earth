@@ -44,6 +44,7 @@ const allImages = [
     [require("../../Images/Photo 2.png")],
     [require("../../Images/Photo 3.png")],
     [require("../../Images/Photo 4.png")],
+    [require("../../Images/Photo 44.jpeg")],
     [require("../../Images/Photo 5.png")],
     [require("../../Images/Photo 6.png")],
     [require("../../Images/Photo 7.png")],
@@ -62,18 +63,18 @@ export default function BasicImageList() {
 <Hidden smDown={true}>
 <GridList spacing={25}  className={classes.imageList} cols={2}>
         {allImages.map((item,index) => (
-         index!== allImages.length-2? <GridListTile className={classes.col} key={index*100} cols={item[1] || 1}>
+         <GridListTile className={classes.col} key={index*100} cols={item[1] || 1}>
            <SimpleImg height={"100%"} src={item[0].default} />
-          </GridListTile>:null
+          </GridListTile>
         ))}
       </GridList>
 </Hidden>
 <Hidden mdUp={true}>
       <div className={classes.imageListPhone} >
         {allImages.map((item,index) => (
-         index!== allImages.length-2?<div className={classes.imgcontainer} key={index*100} >
+          <div className={classes.imgcontainer} key={index*100} >
            <SimpleImg animationDuration={1} className={classes.img}  height="100%" width="100%" alt={index} src={item[0].default} />
-          </div>:null
+          </div>
         ))}
       </div>
   </Hidden>
